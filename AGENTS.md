@@ -17,7 +17,7 @@
 |------------------|---------------------------------------------------------|
 | `../nyar-vm.rs` | Rust 编译工具链与目标后端 |
 | `../valkyrie.rs` | 语言夹具与符合性验证 |
-| `../valkyrie.v`  | V 语言 `core` / `std`（经根 `legions.von` 注册）        |
+| `../valkyrie.v`  | V 语言 `std`（经根 `legions.von` 注册）                 |
 
 ## 标识符（slug / id / number）
 
@@ -40,7 +40,7 @@ readme 链接用 **number**；目录与跑测键用 **slug** / **id**。
 | `projects/conformance/`                        | 完备性矩阵、TS/Python/V 跑测、**外部产物基准**                              |
 | `projects/dashboard/`                          | Vue 看板（缓存 `benchmark-results.json`，Vega-Lite 可视化）                 |
 | `scripts/`                                     | `batch-limit.mjs`、`link-valkyrie.mjs`、`valkyrie-v-deps.mjs` |
-| `legions.von`                                  | workspace 成员：`../valkyrie.v/projects/core`、`std`                        |
+| `legions.von`                                  | workspace 成员：`../valkyrie.v/projects/std`                                |
 
 **禁止**：程序化批量生成 V 解、在 `.v` 里嵌 `# ```legion` cargo-script、把 solver 再套一层 `source/` 目录（除非 `legion`
 规划器明确要求）。

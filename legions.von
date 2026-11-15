@@ -1,7 +1,6 @@
 {
     name: "project-euler",
     members: [
-        "../valkyrie.v/projects/core",
         "../valkyrie.v/projects/std"
     ],
     workspace: {

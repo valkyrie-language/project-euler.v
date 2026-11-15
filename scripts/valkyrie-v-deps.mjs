@@ -7,7 +7,7 @@ export const EULER_ROOT = join(SCRIPTS_DIR, "..");
 
 export const VALKYRIE_V_GIT =
     process.env.VALKYRIE_V_GIT ?? "https://github.com/valkyrie-language/valkyrie.v.git";
-export const VALKYRIE_V_REF = process.env.VALKYRIE_V_REF ?? "main";
+export const VALKYRIE_V_REF = process.env.VALKYRIE_V_REF ?? "master";
 export const VALKYRIE_V_ROOT = resolve(
     process.env.VALKYRIE_V_ROOT ?? join(EULER_ROOT, "..", "valkyrie.v"),
 );
@@ -37,17 +37,15 @@ export function coreStdDependenciesVon() {
         std: true`;
 }
 
-/** 写入 `project-euler.v/legions.von`，注册 `core` / `std` workspace 成员。 */
+/** 写入 `project-euler.v/legions.von`，注册 `std` workspace 成员。 */
 export function eulerLegionsVon({
     eulerRoot = EULER_ROOT,
     valkyrieRoot = VALKYRIE_V_ROOT,
 } = {}) {
-    const coreMember = toPosixPath(relative(eulerRoot, join(valkyrieRoot, "projects", "core")));
     const stdMember = toPosixPath(relative(eulerRoot, join(valkyrieRoot, "projects", "std")));
     return `{
     name: "project-euler",
     members: [
-        "${coreMember}",
         "${stdMember}"
     ],
     workspace: {
