@@ -1,7 +1,6 @@
 # OS
 .DS_Store/
 thumbs.db
-time-travel.*
 
 # IDE
 .vscode/
@@ -9,6 +8,15 @@ time-travel.*
 .idea/
 *.iml
 
-# Rust
-target/
-Cargo.lock
+.cursor/
+
+.cache
+vendors/
+_vendor/
+projects/problems/*/dist/
+
+node_modules/
+dist/
+
+__pycache__/
+scripts/_bootstrap_scaffold.py
