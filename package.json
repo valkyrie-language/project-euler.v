@@ -1,11 +1,23 @@
 {
+    "name": "project-euler-v",
     "private": true,
+    "version": "0.1.0",
+    "description": "Project Euler \u5728 Valkyrie \u4e0e TypeScript \u4e0a\u7684\u5b8c\u5907\u6027\u6d4b\u8bd5\u4e0e\u57fa\u51c6\u770b\u677f",
     "scripts": {
-        "doc": "cargo doc --no-deps --all-features",
-        "test": "cargo test --release",
-        "fmt": "cargo fmt --all",
-        "p": "git push && git push --tags --prune",
-        "reset": "git reset Head~ --soft",
-        "u": "cargo upgrade --workspace"
-    }
+        "fmt": "nifty format",
+        "fmt:check": "nifty format --check",
+        "link:valkyrie": "node scripts/link-valkyrie.mjs",
+        "test:problems": "pnpm --filter @euler/conformance test",
+        "bench": "pnpm --filter @euler/conformance run bench",
+        "dashboard": "pnpm --filter @euler/bench-dashboard run dev"
+    },
+    "devDependencies": {
+        "@doki-land/nifty": "^0.0.3",
+        "pnpm": "^10.18.3"
+    },
+    "engines": {
+        "node": ">=20.0.0",
+        "pnpm": ">=10.0.0"
+    },
+    "packageManager": "pnpm@10.18.3"
 }
