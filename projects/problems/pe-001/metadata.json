@@ -1,0 +1,15 @@
+{
+    "id": "pe-001",
+    "number": 1,
+    "title": "Multiples of 3 and 5",
+    "answer": "233168",
+    "tests": [
+        {
+            "expected": 233168
+        }
+    ],
+    "invoke": {
+        "python": "solve",
+        "typescript": "solve"
+    }
+}

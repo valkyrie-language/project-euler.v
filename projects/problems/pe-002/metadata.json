@@ -1,0 +1,15 @@
+{
+    "id": "pe-002",
+    "number": 2,
+    "title": "Even Fibonacci Numbers",
+    "answer": "4613732",
+    "tests": [
+        {
+            "expected": 4613732
+        }
+    ],
+    "invoke": {
+        "python": "solve",
+        "typescript": "solve"
+    }
+}
